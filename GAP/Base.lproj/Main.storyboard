@@ -1,25 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFw-He-drW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Splash View Controller-->
+        <scene sceneID="Fhy-dO-Qgo">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eFw-He-drW" customClass="GAPSplashViewController" customModule="GAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="O7T-GF-FXD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rwv-Ga-9eN"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="DBj-IJ-9kV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jp-Ge-scc">
+                                <rect key="frame" x="199" y="277" width="202" height="46"/>
+                                <state key="normal" image="LOGIN">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapLogin" destination="eFw-He-drW" eventType="touchUpInside" id="NtI-cD-NWy"/>
+                                    <action selector="didTapLogin:" destination="eFw-He-drW" eventType="touchUpInside" id="Qy7-xp-ud1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vle-ua-QM9">
+                                <rect key="frame" x="199" y="386" width="202" height="46"/>
+                                <state key="normal" image="signupButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSignup:" destination="eFw-He-drW" eventType="touchUpInside" id="bLV-hy-E11"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-lg-ddr">
+                                <rect key="frame" x="284" y="346" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vle-ua-QM9" firstAttribute="leading" secondItem="1Jp-Ge-scc" secondAttribute="leading" id="CAj-WL-SUu"/>
+                            <constraint firstAttribute="centerY" secondItem="1Jp-Ge-scc" secondAttribute="centerY" id="JZF-tu-hWi"/>
+                            <constraint firstItem="vle-ua-QM9" firstAttribute="top" secondItem="1Jp-Ge-scc" secondAttribute="bottom" constant="63" id="jsH-Mr-QBk"/>
+                            <constraint firstAttribute="centerX" secondItem="1Jp-Ge-scc" secondAttribute="centerX" id="wdd-jR-JW0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="x5J-lg-ddr" id="gBj-bW-Ln5"/>
+                        <outlet property="didTapLogin" destination="1Jp-Ge-scc" id="NyM-CF-EP7"/>
+                        <outlet property="didTapSignup" destination="vle-ua-QM9" id="rQf-nb-qyw"/>
+                        <outlet property="loginButton" destination="1Jp-Ge-scc" id="lWe-7Y-6HZ"/>
+                        <outlet property="signupButton" destination="vle-ua-QM9" id="SH8-Eg-W2a"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nV-8B-VhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-5887" y="-4725"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LOGIN" width="202" height="46"/>
+        <image name="signupButton.png" width="202" height="46"/>
+    </resources>
 </document>
