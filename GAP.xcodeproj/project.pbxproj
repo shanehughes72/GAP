@@ -77,10 +77,8 @@
 		02F8F6D21B10E94500AA2D7C /* GAP */ = {
 			isa = PBXGroup;
 			children = (
-				02F8F6D51B10E94500AA2D7C /* AppDelegate.swift */,
 				02F8F6D71B10E94500AA2D7C /* ViewController.swift */,
 				02F8F6D91B10E94500AA2D7C /* Main.storyboard */,
-				02F8F6DC1B10E94500AA2D7C /* Images.xcassets */,
 				02F8F6DE1B10E94500AA2D7C /* LaunchScreen.xib */,
 				02F8F6D31B10E94500AA2D7C /* Supporting Files */,
 			);
@@ -90,6 +88,8 @@
 		02F8F6D31B10E94500AA2D7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				02F8F6DC1B10E94500AA2D7C /* Images.xcassets */,
+				02F8F6D51B10E94500AA2D7C /* AppDelegate.swift */,
 				02F8F6D41B10E94500AA2D7C /* Info.plist */,
 			);
 			name = "Supporting Files";
